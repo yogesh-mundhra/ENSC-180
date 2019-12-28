@@ -1,0 +1,26 @@
+A=[4 3 1;3 7 -1; 1 -1 9];
+M= [1 0 0;0 2 0;0 0 3];
+[V,D]=eig(A,M)
+fprintf('a 6x6 magic matrix:\n')
+M=magic(6)
+fprintf('The sum of columns of M\n')
+fprintf(' %d ',sum(M))
+fprintf('\nThe sum of rows of M\n')
+fprintf(' %d\n',sum(M,2))
+fprintf('The trace of M\n')
+fprintf(' %d\n',trace(M))
+fprintf('The sum of the opposite diagonal of M\n')
+fprintf(' %d\n',trace(flip(M)))
+fprintf('Replacing A with a 4x4 magic matrix\n')
+A=magic(4);
+fprintf('\nInitializing B\n')
+B=[A 2*A; A.*A A+2]
+fprintf('The sum of columns of B\n')
+fprintf(' %d ',sum(B))
+fprintf('\n')
+fprintf('The sum of rows of M\n')
+fprintf(' %d\n',sum(B,2))
+fprintf('The trace of M\n')
+fprintf(' %d\n',trace(B))
+fprintf('The sum of the opposite diagonal of M\n')
+fprintf(' %d\n',trace(flip(B)))

@@ -1,0 +1,21 @@
+syms f1 f2 x
+f1=6*x^3+19*x^2-19*x+4;
+f2=(x^2-5*x+6)/(x^2-4);
+fprintf('Factors of f1\n')
+disp(factor(f1))
+fprintf('Factors of f2\n')
+disp(factor(f2))
+fprintf('Simplify f1*f2\n')
+disp(simplify(f1*f2))
+fprintf('f1/f2=\n')
+disp(f1/f2)
+fprintf('(f1*f2)^2=\n')
+disp((f1*f2)^2)
+fprintf('d/dx (f1)=\n')
+disp(diff(f1))
+fprintf('d/dx (f2)=\n')
+disp(diff(f2))
+fprintf('Integral of f1 from 2 to 4 w.r.t x\n')
+disp(int(f1,2,4))
+fprintf('Integral of f1 from 2 to 4 w.r.t x\n')
+disp(int(f2,2,4))
